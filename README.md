@@ -51,7 +51,7 @@ In order to draw the left and right lane lines, I modified the draw_lines() func
 
 One potential shortcoming would be that the pipeline draws straight lines which obviously cannot follow curves.
 
-Another shortcoming could be that the pipeline makes uses previous lane lines in case the algorithm is not able to detect the current lines. For a real self driving car, this would be very dangerous, because the car would still think that it "sees" lane lines even though it is already driven off the road.
+Another shortcoming could be that the algorithm in this pipeline uses coordinates of previous lane lines in case it is not able to detect the lane lines from the current image. For a real self driving car, this would be very dangerous, because the car would still think that it "sees" lane lines even though it is already driven off the road.
 
 
 ## Suggest possible improvements to your pipeline
