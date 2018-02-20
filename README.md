@@ -15,36 +15,42 @@ The goals / steps of this project are the following:
 
 ---
 
-### Reflection
-
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+## The Lane Line Detection Pipeline
 
 My pipeline consisted of 5 steps:
 1. convert the images to grayscale
+<img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/1_greyscale.jpg" width="400">
 2. apply Gaussian smoothing in order to reduce the noise in the image
+<img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/2_blured.jpg" width="400">
 3. detect edges using canny edge detection algorithm
+<img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/3_canny.jpg" width="400">
 4. select the region of interest by applying a mask
+<img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/4_masked.jpg" width="400">
 5. apply the hough transformation in order to identify the lines
+<img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/5_hough.jpg" width="400">
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by 
-1. identifying the right and left lines by analyzing their slope
-2. filtering out lines that are obviously not lane lines
-3. interpolation of the lines to the full length betwwen the bottom of the image and the horizon
-4. calculate the median values of the left and right lines
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
+In order to draw the left and right lane lines, I modified the draw_lines() function by 
+1. Assign the lines from the hough transformation to the right or left lane by analyzing the slope. 
+2. Filtering out lines that are not lane lines. Only lines with a slope between 0.5 and 2 are considered as potential lane lines 
+3. Extrapolation of the lines to the full length betwwen the bottom of the image and the horizon
+4. Calculate the x value of the bottom and top end of the lane line by calculation of the median value of the set of right or left hough lines.
+5. In order to handle situations where the pipeline is not able to produce a line line we simply use the precvious lane line coordinates.
 
 
-### 2. Identify potential shortcomings with your current pipeline
+## Results
+
+
+
+## Identify potential shortcomings with your current pipeline
 
 
 One potential shortcoming would be that the pipeline draws straight lines which obviously cannot follow curves.
 
-Another shortcoming could be that the input image is not sufficient for detection of the lanes so that we either get randon lines that do not follow the lane lines or we do not get any lane lines at all.
+Another shortcoming could be that the pipeline makes uses previous lane lines in case the algorithm is not able to detect the current lines. For a real self driving car, this would be very dangerous, because the car would still think that it "sees" lane lines even though it is already driven off the road.
 
 
-### 3. Suggest possible improvements to your pipeline
+### Suggest possible improvements to your pipeline
 
-A possible improvement would be to consider the position of the lane lines in previous images in order to validate and influence the  calculation of the current results. Since the speed of the car is limited, we can assume that the street doesn't change dramatically between two images.
+A possible improvement would be to consider the position of the lane lines in previous images in order to validate and influence the  calculation of the current results. Since the speed of the car is limited, we can assume that the street doesn't change dramatically between two images. This could also trembling lane lines in the video.
+
+Another improvement could be the integration of some algorithm that configures the parameters of the pipeline according to the quality and needs of the input video. 
