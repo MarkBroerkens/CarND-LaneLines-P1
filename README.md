@@ -1,4 +1,4 @@
-This is my submission for the Udacity Self-Driving Car Nanodegree Lane Detection Project. You can find my code in this [Jupyter Notebook](P1.ipynb). The goal of this project was to implement a computer vision pipeline that would detect and highlight lane markers. The following is a brief walk-through my code.
+This is my submission for the Udacity Self-Driving Car Nanodegree Lane Detection Project. You can find my code in this [Jupyter Notebook](https://github.com/MarkBroerkens/CarND-LaneLines-P1/blob/master/P1.ipynb). 
 
 ## Summary
 
