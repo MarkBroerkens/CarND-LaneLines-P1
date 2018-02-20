@@ -1,3 +1,9 @@
+This is my submission for the Udacity Self-Driving Car Nanodegree Lane Detection Project. You can find my code in this [Jupyter Notebook](P1.ipynb). The goal of this project was to implement a computer vision pipeline that would detect and highlight lane markers. The following is a brief walk-through my code.
+
+## Summary
+
+The pipeline takes a video of a street as input and outputs it with the lane markers highlighted.
+
 ## Finding Lane Lines on the Road ##
 
 The goals / steps of this project are the following:
