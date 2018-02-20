@@ -47,12 +47,12 @@ In order to draw the left and right lane lines, I modified the draw_lines() func
 
 
 ## Results
-[white] (https://youtu.be/Tgr6BCZZ_3g "Click to watch")
 
-[yellow] (https://youtu.be/oSYKV15r19I "Click to watch")
+[![White Line](https://img.youtube.com/vi/Tgr6BCZZ_3g/0.jpg)](https://www.youtube.com/watch?v=Tgr6BCZZ_3g)
 
-[challenge] (https://youtu.be/r_DpWtK0Myg "Click to watch")
+[![Yellow Line](https://img.youtube.com/vi/oSYKV15r19I/0.jpg)](https://www.youtube.com/watch?v=oSYKV15r19I)
 
+[![Challenge](https://img.youtube.com/vi/r_DpWtK0Myg/0.jpg)](https://www.youtube.com/watch?v=r_DpWtK0Myg)
 
 
 ## Identify potential shortcomings with your current pipeline
