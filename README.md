@@ -54,7 +54,7 @@ One potential shortcoming would be that the pipeline draws straight lines which 
 Another shortcoming could be that the pipeline makes uses previous lane lines in case the algorithm is not able to detect the current lines. For a real self driving car, this would be very dangerous, because the car would still think that it "sees" lane lines even though it is already driven off the road.
 
 
-### Suggest possible improvements to your pipeline
+## Suggest possible improvements to your pipeline
 
 A possible improvement would be to consider the position of the lane lines in previous images in order to validate and influence the  calculation of the current results. Since the speed of the car is limited, we can assume that the street doesn't change dramatically between two images. This could also trembling lane lines in the video.
 
