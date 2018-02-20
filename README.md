@@ -3,6 +3,8 @@ This is my submission for the Udacity Self-Driving Car Nanodegree Lane Detection
 ## Summary
 
 The pipeline takes a video of a street as input and outputs it with the lane markers highlighted.
+<img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/0_original.jpg" width="400">
+<img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/6_result.jpg" width="400">
 
 ## Finding Lane Lines on the Road ##
 
@@ -10,10 +12,6 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
 
 ---
 
