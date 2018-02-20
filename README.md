@@ -18,15 +18,24 @@ The goals / steps of this project are the following:
 ## The Lane Line Detection Pipeline
 
 My pipeline consisted of 5 steps:
-1. convert the images to grayscale
+1. Convert the images to grayscale
+
 <img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/1_greyscale.jpg" width="400">
-2. apply Gaussian smoothing in order to reduce the noise in the image
+
+2. Apply Gaussian smoothing in order to reduce the noise in the image
+
 <img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/2_blured.jpg" width="400">
-3. detect edges using canny edge detection algorithm
+
+3. Detect edges using canny edge detection algorithm
+
 <img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/3_canny.jpg" width="400">
-4. select the region of interest by applying a mask
+
+4. Select the region of interest by applying a mask
+
 <img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/4_masked.jpg" width="400">
-5. apply the hough transformation in order to identify the lines
+
+5. Apply the hough transformation in order to identify the lines
+
 <img src="https://raw.githubusercontent.com/MarkBroerkens/CarND-LaneLines-P1/master/readme_images/5_hough.jpg" width="400">
 
 In order to draw the left and right lane lines, I modified the draw_lines() function by 
